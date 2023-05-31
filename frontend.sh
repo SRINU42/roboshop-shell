@@ -7,6 +7,7 @@ rm -rf /usr/share/nginx/html/* >/tmp/roboshop.log
 
 echo -e "\e[33m loading the content \e[0m"
 curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.zip >/tmp/roboshop.log
+>/tmp/roboshop.log 
 
 echo -e "\e[33m unzizng the file\e[0m"
 cd /usr/share/nginx/html 
