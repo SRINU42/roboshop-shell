@@ -13,7 +13,7 @@ echo -e "\e[33m unzizng the file\e[0m"
 cd /usr/share/nginx/html 
 unzip /tmp/frontend.zip &>>/tmp/roboshop.log
 
-echo -e "\e[33m starting nginx server \e[0m"
+echo -e "\e[33m inisiting conf fiel \e[0m"
 cp roboshop.conf /etc/nginx/default.d/roboshop.conf &>>/tmp/roboshop.log
 
 echo -e "\e[33m starting nginx server \e[0m"
