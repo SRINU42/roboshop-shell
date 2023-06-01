@@ -13,15 +13,15 @@ rm -rf /app
 mkdir /app &>>/tmp/roboshop.log
 
 echo -e "\e[33m download application contents \e[0m"
-curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip 
+curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
 cd /app 
-unzip /tmp/catalogue.zip
+unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
 
 echo -e "\e[33m installing nodejs dependence \e[0m"
-npm install 
+npm install &>>/tmp/roboshop.log
 
 echo -e "\e[33m setup systemD service \e[0m"
-cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
 
 echo -e "\e[33m starting the nodejs \e[0m"
 systemctl daemon-reload
