@@ -14,7 +14,7 @@ mkdir /app
 echo -e "\e[33m downloading application content \e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
 cd /app 
-unzip /tmp/catalogue.zip 
+unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
 
 echo -e "\e[33m install apllication content \e[0m"
 npm install &>>/tmp/roboshop.log
