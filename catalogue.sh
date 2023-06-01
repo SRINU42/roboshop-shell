@@ -20,7 +20,7 @@ echo -e "\e[33m install npm \e[0m"
 npm install &>>/tmp/roboshop.log
 
 echo -e "\e[33m update configuration  \e[0m"
-cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
+cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service 
 
 echo -e "\e[33m reloadong  \e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
