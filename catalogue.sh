@@ -18,7 +18,7 @@ cd /app
 unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
 
 echo -e "\e[33m install npm \e[0m"
-cp /app
+cd /app
 npm install &>>/tmp/roboshop.log
 
 echo -e "\e[33m update configuration  \e[0m"
