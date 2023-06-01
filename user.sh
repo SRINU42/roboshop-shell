@@ -10,6 +10,7 @@ rm -rf roboshop
 useradd roboshop &>>/tmp/roboshop.log
 
 echo -e "\e[33m create app directory \e[0m"
+rm -rf /app
 mkdir /app 
 
 echo -e "\e[33m download application contents \e[0m"
@@ -25,7 +26,7 @@ echo -e "\e[33m setup systemD service \e[0m"
 cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service &>>/tmp/roboshop.log
 
 echo -e "\e[33m start the user \e[0m"
-systemctl daemon-reload
+systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable user 
 systemctl start user &>>/tmp/roboshop.log
 
