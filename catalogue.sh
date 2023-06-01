@@ -9,6 +9,7 @@ rm -rf roboshop
 useradd roboshop&>>/tmp/roboshop.log
 
 echo -e "\e[33m crate app dir \e[0m"
+rm -rf /app
 mkdir /app &>>/tmp/roboshop.log
 
 echo -e "\e[33m update configuration  \e[0m"
