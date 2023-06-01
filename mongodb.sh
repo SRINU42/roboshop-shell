@@ -8,7 +8,8 @@ echo -e "\e[33m update mongodb lisiten address \e[0m"
 sed -i -e 's/127.0.0.1/0.0.0.0' /etc/mongod.conf
 
 echo -e "\e[33m start mongodb \e[0m"
-systemctl enable mongod 
-systemctl restart mongod  &>>/tmp/roboshop.log
+systemctl enable mongod &>>/tmp/roboshop.log
+ 
+systemctl restart mongod &>>/tmp/roboshop.log
 
 
