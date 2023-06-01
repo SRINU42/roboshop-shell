@@ -1,5 +1,5 @@
 echo -e "\e[33m dwonloading mongo repo fiel \e[0m"
-cp /home/centos/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
+cp /home/centos/roboshop-shell/mongodb.repo /etc/yum.repos.d/mongo.repo &>>/tmp/roboshop.log
 
 echo -e "\e[33m installing mongodb server \e[0m"
 yum install mongodb-org -y &>>/tmp/roboshop.log
