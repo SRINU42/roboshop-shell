@@ -14,13 +14,13 @@ mkdir /app
 echo -e "\e[33m downloading application content \e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
 cd /app 
-unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
+unzip /tmp/catalogue.zip 
 
 echo -e "\e[33m install apllication content \e[0m"
 npm install &>>/tmp/roboshop.log
 
 echo -e "\e[33m setup conf \e[0m"
-cp /home/centos/roboshop-shell/catalogue.service vim /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
+cp /home/centos/roboshop-shell/catalogue.service vim /etc/systemd/system/catalogue.service 
 
 echo -e "\e[33m start cofg  \e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
