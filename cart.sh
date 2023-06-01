@@ -12,7 +12,7 @@ useradd roboshop &>>/tmp/roboshop.log
 echo -e "\e[33m create app directory \e[0m"
 mkdir /app 
 
-eecho -e "\e[33m download application contents \e[0m"
+echo -e "\e[33m download application contents \e[0m"
 curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip &>>/tmp/roboshop.log
 cd /app 
 unzip /tmp/cart.zip &>>/tmp/roboshop.log
