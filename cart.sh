@@ -10,6 +10,7 @@ rm -rf roboshop
 useradd roboshop &>>/tmp/roboshop.log
 
 echo -e "\e[33m create app directory \e[0m"
+rm -rf /app
 mkdir /app 
 
 echo -e "\e[33m download application contents \e[0m"
