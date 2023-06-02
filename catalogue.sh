@@ -6,7 +6,6 @@ echo -e "\e[33m install nodjs \e[0m"
 yum install nodejs -y &>>/tmp/robokshop.log
 
 echo -e "\e[33m create user \e[0m"
-rm roboshop
 useradd roboshop &>>/tmp/robokshop.log 
 rm -rf /app
 mkdir /app &>>/tmp/robokshop.log 
