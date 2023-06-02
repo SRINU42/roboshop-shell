@@ -10,12 +10,12 @@ rm -rf /app &>>/tmp/roboshop.log
 mkdir /app &>>/tmp/roboshop.log
 
 echo -e "\e[33m dowloading catalogue configuration  \e[0m"
-curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
+curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip 
 cd /app &>>/tmp/roboshop.log
 
 echo -e "\e[33m unzip the catalogue content \e[0m"
-unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
-cd /app &>>/tmp/roboshop.log
+unzip /tmp/catalogue.zip 
+cd /app 
 
 echo -e "\e[33m installing npm \e[0m"
 npm install &>>/tmp/roboshop.log
