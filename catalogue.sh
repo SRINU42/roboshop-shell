@@ -10,17 +10,18 @@ rm -rf /app &>>/tmp/roboshop.log
 mkdir /app &>>/tmp/roboshop.log
 
 echo -e "\e[33m dowloading catalogue configuration  \e[0m"
-curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip 
+curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/roboshop.log
 cd /app &>>/tmp/roboshop.log
 
 echo -e "\e[33m unzip the catalogue content \e[0m"
-unzip /tmp/catalogue.zip 
-cd /app 
+unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
+cd /app &>>/tmp/roboshop.log
 
 echo -e "\e[33m installing npm \e[0m"
 npm install &>>/tmp/roboshop.log
 
-cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>>/tmp/roboshop.log
+echo -e "\e[33m start the catalogue \e[0m"
+cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service 
 echo -e "\e[33m start the catalogue \e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable catalogue &>>/tmp/roboshop.log
