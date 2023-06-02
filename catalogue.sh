@@ -7,12 +7,12 @@ yum install nodejs -y &>>/tmp/robokshop.log
 
 echo -e "\e[33m create user \e[0m"
 rm -rf roboshop
-useradd roboshop
+useradd roboshop 
 rm -rf /app
 mkdir /app &>>/tmp/robokshop.log 
 
 echo -e "\e[33m add aplication content \e[0m"
-curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip 
+curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip &>>/tmp/robokshop.log
 cd /app 
 
 echo -e "\e[33m unzip the content \e[0m"
@@ -27,7 +27,7 @@ cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.s
 
 echo -e "\e[33m start catalogue \e[0m"
 systemctl daemon-reload &>>/tmp/robokshop.log
-systemctl enable catalogue 
+systemctl enable catalogue &>>/tmp/robokshop.log
 systemctl restart catalogue &>>/tmp/robokshop.log
 
 echo -e "\e[33m mongodb repofile  \e[0m"
