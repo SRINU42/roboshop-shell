@@ -1,3 +1,5 @@
+source common.sh
+
 yum install nginx -y 
 
 
